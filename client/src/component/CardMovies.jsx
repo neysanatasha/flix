@@ -2,7 +2,8 @@ import {useContext, useState } from "react";
 import {  Container } from "react-bootstrap";
 import { useQuery, queryCache } from "react-query";
 import { Link, NavLink } from "react-router-dom";
-import EditFilm from "../component/EditFilm";
+// import EditFilm from "../component/EditFilm";
+import UpdateMovies from "../component/UpdateMovies";
 import { API, setAuthToken } from "../config/api";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
@@ -200,7 +201,7 @@ export default function Card() {
           </div>
         </>
       </Container>
-      <EditFilm show={showModal} onHide={() => setShowModal(false)} selectedFilm={selectedFilm} onSave={handleEditFilm}/>
+      <UpdateMovies show={showModal} onHide={() => setShowModal(false)} selectedFilm={selectedFilm} onSave={handleEditFilm}/>
     </>
   );
 }
